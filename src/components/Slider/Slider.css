@@ -1,0 +1,31 @@
+.range-slider {
+  width: 100%;
+  @apply flex items-center my-5 text-grey;
+}
+input[type="range"] {
+  width: 100%;
+  flex: 6;
+  -webkit-appearance: none;
+  height: 10px !important;
+  border-radius: 5px;
+  @apply bg-grey;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 25px;
+  @apply bg-grey cursor-pointer;
+  outline: 5px solid #61697a;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 50px;
+  height: 25px;
+  @apply bg-grey cursor-pointer;
+  outline: 5px solid #61697a;
+}
+.value {
+  flex: 1;
+  font-size: 2rem;
+}

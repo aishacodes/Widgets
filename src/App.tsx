@@ -1,45 +1,30 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { RangeSlider } from "./components/Slider";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [rentSplit, setRentSplit] = useState(10);
+
+  const handleRentSplit = (value: any) => {
+    setRentSplit(value);
+    // const cloneForm = [...form.get];
+    // cloneForm[index].rentSplit = value;
+    // form.set(cloneForm);
+  };
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <div className="flex justify-between items-center">
+        <div className="w-10/12">
+          <RangeSlider value={rentSplit} onChange={handleRentSplit} />
+        </div>
+        <div className="h-12 w-12 flex justify-center items-center bg-white text-rgray text-sm border rounded-sm">
+          {rentSplit}%
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
