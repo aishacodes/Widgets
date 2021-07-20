@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      gi
       <div className="flex justify-between items-center">
         <div className="w-10/12">
           <RangeSlider value={rentSplit} onChange={handleRentSplit} />

@@ -1,0 +1,47 @@
+.TableWidget {
+  @apply flex-grow flex flex-col overflow-hidden;
+}
+.TableArea {
+  @apply flex-grow flex flex-col bg-white rounded-lg mb-4 mx-1 border text-sm overflow-hidden;
+}
+.table-head {
+  @apply font-medium pl-[1.625rem] pr-10;
+}
+.table-body {
+  @apply overflow-y-auto flex-grow;
+}
+.table-head,
+.row {
+  @apply grid gap-x-[3.375rem] items-center border-b  cursor-pointer px-[1.625rem];
+}
+.cell {
+  @apply py-[0.78125rem] text-left;
+}
+
+.table-search {
+  @apply border border-green-400 bg-white rounded py-2 px-3 flex items-center text-sm;
+}
+input {
+  @apply border-none outline-none w-64 font-medium;
+}
+
+.pick-card {
+  @apply border border-green-400 bg-white rounded py-2 px-4 cursor-pointer text-sm relative h-10 flex items-center;
+  .filter-options {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -1rem;
+      width: 0;
+      height: 0;
+      border-right: 1rem solid transparent;
+      left: calc(15rem - 2rem);
+      border-top: 1rem solid white;
+      border-left: 1rem solid transparent;
+      transform: rotate(180deg);
+    }
+  }
+  .options {
+    @apply absolute bottom-0 mb-10 left-0 h-40 shadow bg-white w-full;
+  }
+}
