@@ -1,0 +1,20 @@
+.step {
+  @apply flex items-center;
+}
+.circle {
+  @apply relative flex justify-center items-center rounded-full w-[4.6rem] h-[4.6rem];
+  shape-outside: circle();
+}
+
+.active {
+  background: linear-gradient(
+      90deg,
+      #213864 -1.76%,
+      rgba(44, 73, 113, 0.8327) 101.75%
+    ),
+    #2290ff;
+  color: white;
+}
+/* .circle:not(active) {
+  @apply border border-[#dddddd];
+} */

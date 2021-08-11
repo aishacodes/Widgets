@@ -1,7 +1,9 @@
 import React from "react";
 import styles from ".//../../../styles/AddChair.module.css";
-import LineIndicator from "./../../vectors/LineIndicator";
-import GradientLineIndicator from "../../vectors/GradientLineIndicator";
+import LineIndicator from "./vectors/LineIndicator";
+
+import "./Stepper.css";
+import GradientLineIndicator from "./vectors/GradientLineIndicator";
 
 const Stepper = ({
   noOfSteps,
