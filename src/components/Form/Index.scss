@@ -1,0 +1,42 @@
+.Input {
+  @apply grid;
+}
+
+.checkbox-container {
+  @apply flex items-center justify-center w-4 h-4 rounded-[3px] border border-[#676767] bg-[#fbfbfb] cursor-pointer;
+  &.active {
+    @apply bg-[#093D5E] border-[#093D5E];
+  }
+}
+
+.toggle-container {
+  @apply w-10 h-6 relative inline-block rounded-2xl cursor-pointer;
+  .slider {
+    @apply absolute rounded-2xl inset-0 w-full bg-[#000080] bg-opacity-[0.2];
+    &.active {
+      @apply bg-blue-200;
+      .dialog-button {
+        transform: translateX(1rem);
+      }
+    }
+    .dialog-button {
+      position: absolute;
+      background-color: white;
+      width: 1.25rem;
+      height: 1.25rem;
+      left: 0.125rem;
+      top: 0.125rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+.radiobutton-container {
+  @apply flex items-center justify-center w-4 h-4 lg:w-6 lg:h-6 rounded-full border border-[#A4A4A4] bg-[#fbfbfb] cursor-pointer;
+  &.active {
+    @apply border-[#138EFF];
+  }
+  span {
+    @apply bg-[#138EFF] w-2 lg:w-3 h-2 lg:h-3 rounded-full;
+  }
+}
